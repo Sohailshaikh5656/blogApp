@@ -115,12 +115,16 @@ PORT=3000
 <p>5.Set up Prisma ORM</p>
 
 ```bash
-# Initialize Prisma (if not already set up)
-npx prisma init
 # Generate Prisma Client (Prisma version ^6.19.0)
-npx prisma generate
+npm install @prisma/adapter-pg@6.19.0
+
 # Run database migrations
 npx prisma migrate dev --name init
+npx prisma generate
+
+#if error in database or in migration then reset the prisma-client by this cmd
+npx prisma migrate reset
+#and then run database migration by migrate and generate cmd
 ```
 <br />
 
