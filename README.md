@@ -73,6 +73,7 @@
 <br>
 
 <p>1.Clone the repository</p>
+
 ```bash
 git clone https://github.com/Sohailshaikh5656/blogApp.git
 cd blogApp
@@ -80,12 +81,15 @@ cd blogApp
 <br />
 
 <p>2.Install dependencies</p>
+
 ```bash
 npm install
 ```
+
 <br />
 
 <p>3.Set up PostgreSQL Database</p>
+
 ```bash
 #Install PostgreSQL on your system
 #Create a new database for the application
@@ -109,6 +113,7 @@ PORT=3000
 <br />
 
 <p>5.Set up Prisma ORM</p>
+
 ```bash
 # Initialize Prisma (if not already set up)
 npx prisma init
@@ -120,6 +125,7 @@ npx prisma migrate dev --name init
 <br />
 
 <p>6.Start the application</p>
+
 ```bash
 # Development mode with nodemon
 nodemon server
@@ -135,6 +141,7 @@ node server
 <br />
 
 <h3📁 Project Structure</h3>
+
 ```bash
 blogApp/
 ├── prisma/
@@ -212,6 +219,7 @@ blogApp/
 
 <br />
 <h3>🔧 Prisma Schema Example</h3>
+
 ```bash
 model User {
   id    Int     @id @default(autoincrement())
