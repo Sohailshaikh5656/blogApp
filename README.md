@@ -4,6 +4,11 @@
 </p>
 <br />
 
+<div align="center" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; padding: 20px; background: #f5f5f5; border-radius: 10px; margin: 30px 0;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/100px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" width="80"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/100px-Node.js_logo.svg.png" alt="Node.js" width="80"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Expressjs.png/100px-Expressjs.png" alt="Express.js" width="100"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/100px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="80"><img src="https://cdn.worldvectorlogo.com/logos/prisma-3.svg" alt="Prisma ORM" width="80"><img src="https://www.vectorlogo.zone/logos/rest/rest-icon.svg" alt="REST API" width="80"></div>
+
+
+<br />
+
 
 <h3>🚀 Technologies Used</h3>
 <p>
