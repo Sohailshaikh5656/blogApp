@@ -118,9 +118,10 @@ PORT=3000
 # Initialize Prisma (if not already set up)
 npx prisma init
 # Generate Prisma Client (Prisma version ^6.19.0)
-npx prisma generate
+npm install @prisma/adapter-pg@6.19.0
 # Run database migrations
 npx prisma migrate dev --name init
+npx prisma generate
 ```
 <br />
 
