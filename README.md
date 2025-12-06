@@ -205,14 +205,15 @@ blogApp/
 <hr />
 <h5>Backend Post Man Api's Image</h5>
 <div align="center"> 
-  <img src="screenShots/backendApi1.png" width="75%" />
+  <img src="screenShots/backendApi1.png" width="75%" /><br />
   <img src="screenShots/backendApi2.png" width="75%" />
 </div>
 <hr />
+
 <h5>Api Documentation</h5>
-<div align="center>
-  <img src="screenShots/docx1.png" width="75%" />
-  <img src="screenShots/docx1.png" width="75%" />
+<div align="center">
+  <img src="screenShots/docx1.png" width="75%" /><br />
+  <img src="screenShots/docx1.png" width="75%" /><br />
   <img src="screenShots/docx1.png" width="75%" />
 
 </div>
