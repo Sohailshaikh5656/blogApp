@@ -39,7 +39,14 @@ let middleware = {
             };
             if (responseData.code == 2){
                 res.status(404).send(responseData)
-            }else res.send(responseData)
+            }else if (responseData.code == 0){
+                res.status(400).send(responseData)
+            }else if (responseData.code == 1){
+                res.status(200).send(responseData)
+            }else if (responseData.code == 11){
+                res.status(403).send(responseData)
+            }  
+            else res.status(500).send(responseData)
         })
     },
 
