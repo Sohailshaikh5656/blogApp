@@ -4,37 +4,35 @@
 </p>
 <br />
 
-<div align="center" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; padding: 20px; background: #f5f5f5; border-radius: 10px; margin: 30px 0;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/100px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" width="80"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/100px-Node.js_logo.svg.png" alt="Node.js" width="80"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Expressjs.png/100px-Expressjs.png" alt="Express.js" width="100"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/100px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="80"><img src="https://cdn.worldvectorlogo.com/logos/prisma-3.svg" alt="Prisma ORM" width="80"><img src="https://www.vectorlogo.zone/logos/rest/rest-icon.svg" alt="REST API" width="80"></div>
-
-
+<div align="center" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; padding: 20px; background: #f5f5f5; border-radius: 10px; margin: 30px 0;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/100px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" width="80"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/100px-Node.js_logo.svg.png" alt="Node.js" width="80"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Expressjs.png/100px-Expressjs.png" alt="Express.js" width="100"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/100px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="80"><img src="https://cdn.worldvectorlogo.com/logos/prisma-3.svg" alt="Prisma ORM" width="80"></div>
+<br />
 <br />
 
-
 <h3>🚀 Technologies Used</h3>
-<p>
-  <ul>
-    <li>
-      JavaScript - Core programming language
-    </li>
-    <li>
-      Node.js - Runtime environment
-    </li>
-    <li>
-     Express.js - Web application framework
-    </li>
-    <li>
-     PostgreSQL - Relational database
-    </li>
-    <li>
-     Prisma ORM - Database toolkit
-    </li>
-    <li>
-     Prisma ORM - Database toolkit
-    </li>
-    <li>
-     Prisma ORM - Database toolkit
-    </li>
-  </ul>
+<ul>
+  <li>
+    JavaScript - Core programming language
+  </li>
+  <li>
+    Node.js - Runtime environment
+  </li>
+  <li>
+   Express.js - Web application framework
+  </li>
+  <li>
+   PostgreSQL - Relational database
+  </li>
+  <li>
+   Prisma ORM - Database toolkit
+  </li>
+  <li>
+   Prisma ORM - Database toolkit
+  </li>
+  <li>
+   Prisma ORM - Database toolkit
+  </li>
+</ul>
+
 <br />
 <br />
 
@@ -44,7 +42,6 @@
   <li>
     Register and login with secure JWT authentication
   </li>
-<ul>
   <li>
     Create, read, update, and delete blog posts
   </li>
@@ -55,6 +52,9 @@
 <p>
   The application follows RESTful API design principles and uses Prisma ORM for efficient database operations with PostgreSQL.
 </p>
+
+<br />
+<br />
 
 <h3>
   ⚙️ Installation Guide
@@ -67,8 +67,11 @@
 </ul>
 
 <br />
+
 <h4>Step-by-Step Installation</h4>
+
 <br>
+
 <p>1.Clone the repository</p>
 ```bash
 git clone https://github.com/Sohailshaikh5656/blogApp.git
@@ -88,6 +91,7 @@ npm install
 #Create a new database for the application
 #Note your database credentials (username, password, database name)
 ```
+
 <br />
 
 <p>4.Configure Environment Variables</p>
@@ -95,6 +99,7 @@ npm install
   <li>Create a .env file in the root directory</li>
   <li>Add your database connection string:</li>
 </ul>
+
 ```bash
 DATABASE_URL="postgresql://USERNAME:PASSWORD@localhost:5432/DATABASE_NAME"
 SECRET_KEY = mysecretjwtkey123 #use any random string its require to build jwt tokens for users or just copy this..
