@@ -166,7 +166,7 @@ class userModel {
                     id: 'desc'
                 }
             });
-            if (blogs) {
+            if (blogs && blogs.length > 0) {
                 return {
                     code: responseCode.SUCCESS,
                     keyword: "all_blogs",
