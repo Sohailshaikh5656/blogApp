@@ -140,7 +140,7 @@ node server
 </ul>
 <br />
 
-<h3📁 Project Structure</h3>
+<h3>📁 Project Structure</h3>
 
 ```bash
 blogApp/
@@ -170,7 +170,6 @@ blogApp/
 ```
 
 <h3>✨ Features</h3>
-<br />
 <h5>🔐 Authentication & Authorization</h5>
 <ul>
   <li>User registration and login</li>
@@ -178,7 +177,6 @@ blogApp/
   <li>Password hashing with bcrypt</li>
   <li>Protected routes with middleware</li>
 </ul>
-<br />
 <br />
 <h5>📝 Blog Management</h5>
 <ul>
