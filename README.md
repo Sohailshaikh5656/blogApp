@@ -144,29 +144,52 @@ node server
 
 ```bash
 blogApp/
+│
+├── configure/
+│   └── constant.js              # API documentation variables and constants
+│
+├── language/
+│   ├── en.js                    # English language responses
+│   └── ar.js                    # Arabic language responses
+│
+├── middleware/
+│   └── validation.js            # Request validation and middleware functions
+│
+├── modules/                     # Modular structure for API versioning
+│   └── v1/
+│       ├── Api_document/        # API Documentation module
+│       │   ├── views/
+│       │   │   └── api_doc.ejs  # EJS template for API documentation
+│       │   ├── index.js         # Main module file
+│       │   └── route.js         # Routes for API documentation
+│       │
+│       └── user/                # User module
+│           ├── controller/
+│           │   └── userController.js  # User business logic
+│           ├── model/
+│           │   └── userModel.js       # User data models (Prisma schemas)
+│           └── route/
+│               └── routes.js          # User API routes
+│
+├── node_modules/                # Installed npm packages (auto-generated)
+│
 ├── prisma/
-│   ├── schema.prisma          # Database schema definition
-│   └── migrations/            # Database migration files
-├── src/
-│   ├── controllers/           # Request handlers
-│   │   ├── authController.js  # Authentication logic
-│   │   └── postController.js  # Blog post operations
-│   ├── middleware/            # Custom middleware
-│   │   ├── authMiddleware.js  # JWT verification
-│   │   └── validation.js      # Input validation
-│   ├── models/               # Data models (if not using Prisma directly)
-│   ├── routes/               # API route definitions
-│   │   ├── authRoutes.js     # Authentication routes
-│   │   └── postRoutes.js     # Blog post routes
-│   ├── utils/                # Utility functions
-│   │   └── jwtUtils.js       # JWT helper functions
-│   └── config/               # Configuration files
-│       └── database.js       # Database connection setup
-├── .env                      # Environment variables
-├── .gitignore               # Git ignore file
-├── package.json             # Project dependencies
-├── server.js               # Application entry point
-└── README.md               # This file
+│   ├── schema.prisma           # Prisma database schema
+│   └── migrations/             # Database migration files
+│
+├── screenShots/                # Application screenshots for documentation
+│
+├── utilities/                  # Utility functions and helpers
+│   ├── common.js              # Common utility functions
+│   ├── responseCode.js        # HTTP response codes and messages
+│   └── rules.js              # Validation rules and business rules
+│
+├── .env                       # Environment variables
+├── .gitignore                 # Git ignore configuration
+│
+├── app.js                     # Main Express application configuration
+├── package.json              # Project metadata and dependencies
+└── package-lock.json         # Exact dependency versions
 ```
 
 <h3>✨ Features</h3>
