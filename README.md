@@ -132,9 +132,7 @@ npx prisma migrate reset
 
 ```bash
 # Development mode with nodemon
-nodemon server
-# Or with node
-node server
+nodemon serve
 ```
 
 <p>7.Access the application</p>
@@ -142,6 +140,14 @@ node server
   <li>The server will run on http://localhost:3000</li>
   <li>Use API testing tools like Postman or Thunder Client to interact with endpoints</li>
 </ul>
+<br />
+
+<p>8.Api Documentation</p>
+```bash
+# Just on Browser
+http://localhost:3000/api-doc
+
+```
 <br />
 
 <h3>📁 Project Structure</h3>
