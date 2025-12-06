@@ -90,7 +90,7 @@ class userModel {
                 }
             } else {
                 return {
-                    code: responseCode.OPERATION_FAILED,
+                    code: responseCode.NO_DATA_FOUND,
                     keyword: "user_not_found",
                     data: "Wrong Email for User Login ! Or Email Not Found"
                 };
@@ -195,7 +195,7 @@ class userModel {
             const blogs = await Prisma.blog.findMany({
                 where: { authorId: parseInt(requestData.authorId), isDeleted: false, isActive: true }
             })
-            if (blogs) {
+            if (blogs && blogs.length > 0) {
                 return {
                     code: responseCode.SUCCESS,
                     keyword: "my_blogs",

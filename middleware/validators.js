@@ -37,8 +37,9 @@ let middleware = {
                 message: translatedMessage ?? null, 
                 data: message.data ?? null,  // Fix: Ensure `data` is not undefined
             };
-
-            res.send(responseData)
+            if (responseData.code == 2){
+                res.status(404).send(responseData)
+            }else res.send(responseData)
         })
     },
 
