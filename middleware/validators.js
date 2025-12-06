@@ -32,7 +32,6 @@ let middleware = {
     sendResponse : function(req,res,message){
         //console.log(req.language);
         this.getMessage(req.language, { keyword: message.keyword, content : message.content }, (translatedMessage) => {
-            console.log(translatedMessage);
             let responseData = {  // Fix: Define `responseData`
                 code: message.code??null,
                 message: translatedMessage ?? null, 
@@ -98,8 +97,8 @@ let middleware = {
         if(pathData[1] == "api-doc") return callback()
         if(api_key != ""){
             try{
-                console.log("ENV API KEY : ",process.env.api_key)
-                console.log("Header API KEY : ",api_key)
+                // console.log("ENV API KEY : ",process.env.api_key)
+                // console.log("Header API KEY : ",api_key)
                 if(api_key != "" && api_key == process.env.API_KEY){
                     callback()
                 }else{
@@ -140,16 +139,10 @@ let middleware = {
         else if (bypassMethods.indexOf(pathData[3]) === -1 && pathData[1] !== "uploads") {
             if (headerToken !== "") {
                 try {
-                    console.log("Header token : ",headerToken)
-                    // ✅ STEP 1: Verify the JWT
                     const decoded = jwt.verify(headerToken, process.env.SECRET_KEY);
 
-                    console.log("Decoded : ",decoded)
-                    // ✅ STEP 2: Decrypt the ID inside payload
-                    // ✅ STEP 3: Route-based identity check
                     if (pathData[2] === "user") {
                         const decryptedId = decoded?.userId 
-                        console.log("Decrypted Buyer ID:", decryptedId);
                         req.userId = parseInt(decryptedId);
                         callback();
                     } else {

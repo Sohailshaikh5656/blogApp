@@ -3,7 +3,7 @@ dotenv.config()
 // let cryptlib = require("cryptlib");
 
 // Debugging: Check if the key is loaded
-console.log("Encryption Key from ENV:", process.env.ENCRYPTION_SECRET_KEY);
+// console.log("Encryption Key from ENV:", process.env.ENCRYPTION_SECRET_KEY);
 
 
 let constant = {
@@ -15,7 +15,5 @@ let constant = {
     port_base_url :process.env.URL+":"+process.env.PORT+'/'
 };
 
-// console.log("Final Encryption Key:", constant?.encryptionKey);
-console.log("Final Encryption Key:", constant?.port_base_url);
 
 module.exports = constant

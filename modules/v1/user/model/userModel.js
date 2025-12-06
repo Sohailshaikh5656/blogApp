@@ -26,7 +26,6 @@ class userModel {
             const user = await Prisma.user.create({
                 data: newUser
             })
-            console.log("New User Register : ", user)
 
             if (user) {
                 delete user?.password
@@ -67,7 +66,6 @@ class userModel {
             const user = await Prisma.user.findUnique({
                 where: { email: userCredentails.email }
             })
-            console.log("user Login : ", user)
 
             if (user) {
                 const compare = await common.comparePasswords(userCredentails.password, user.password)
@@ -124,7 +122,7 @@ class userModel {
             const blog = await Prisma.blog.create({
                 data: newBlogData
             })
-            console.log("New Blog Created : ", blog)
+
             if (blog) {
                 return {
                     code: responseCode.SUCCESS,
@@ -168,8 +166,6 @@ class userModel {
                     id: 'desc'
                 }
             });
-
-            console.log("All Blogs : ", blogs)
             if (blogs) {
                 return {
                     code: responseCode.SUCCESS,
@@ -185,7 +181,6 @@ class userModel {
                 }
             }
         } catch (error) {
-            console.log("Error in All Blogs : ", error)
             return {
                 code: responseCode.OPERATION_FAILED,
                 keyword: "some_went_wrong",
@@ -200,7 +195,6 @@ class userModel {
             const blogs = await Prisma.blog.findMany({
                 where: { authorId: parseInt(requestData.authorId), isDeleted: false, isActive: true }
             })
-            console.log("My Blogs : ", blogs)
             if (blogs) {
                 return {
                     code: responseCode.SUCCESS,
@@ -239,7 +233,6 @@ class userModel {
                     }
                 }
             })
-            console.log("Blog Details : ", blog)
             if (blog) {
                 const updatedBlog = await Prisma.blog.update({
                     where: { id: requestData.id },
@@ -258,7 +251,6 @@ class userModel {
                 }
             }
         } catch (error) {
-            console.log("Error in Blog Details : ", error)
             return {
                 code: responseCode.OPERATION_FAILED,
                 keyword: "some_went_wrong",
@@ -274,8 +266,6 @@ class userModel {
             let checkId = await Prisma.blog.findUnique({
                 where: { id: parseInt(requestData.id) }
             })
-            console.log("Check Blog ID : ", checkId)
-            console.log("Author ID : ", requestData.authorId)
             if (checkId?.authorId !== requestData.authorId) {
                 return {
                     code: responseCode.NOT_APPROVED || 401,
@@ -295,7 +285,6 @@ class userModel {
                 where: { id: parseInt(requestData.id) },
                 data: updateData
             })
-            console.log("Blog Updated : ", blog)
             if (blog) {
                 return {
                     code: responseCode.SUCCESS,
@@ -311,7 +300,6 @@ class userModel {
                 }
             }
         } catch (error) {
-            console.log("Error in Update Blog : ", error)
             return {
                 code: responseCode.OPERATION_FAILED,
                 keyword: "some_went_wrong",
@@ -353,7 +341,6 @@ class userModel {
                 }
             }
         } catch (error) {
-            console.log("Error in Delete Blog : ", error)
             return {
                 code: responseCode.OPERATION_FAILED,
                 keyword: "some_went_wrong",

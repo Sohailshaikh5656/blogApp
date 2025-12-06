@@ -14,7 +14,6 @@ class userController {
     async register(req, res) {
 
         let requestData = req.body
-        console.log("Data : ", req.body)
         let rules = validationRules.register;
         // FIX: Check if req.language exists and has required property
         let message = {
@@ -34,7 +33,6 @@ class userController {
     //Login
     async login(req, res) {
         let requestData = req.body
-        console.log("Data : ", req.body)
         let rules = validationRules.login;
         // FIX: Check if req.language exists and has required property
         let message = {
@@ -55,7 +53,6 @@ class userController {
     async newBlog(req, res) {
         let requestData = req.body
         requestData.authorId = req.userId
-        console.log("Data : ", req.body)
         let rules = validationRules.newBlog;
         let message = {
             required: req.language?.required
@@ -86,7 +83,6 @@ class userController {
     async myBlog(req, res) {
         let requestData = req.body
         requestData.authorId = req.userId
-        console.log("Author Id : ", requestData.authorId)
         let rules = validationRules.newBlog;
         let message = {
             required: req.language?.required
@@ -107,7 +103,6 @@ class userController {
         try{
             let requestData = {}
             requestData.id = parseInt(req.params.id)
-            console.log("Blog ID : ", requestData.id)
             let response = await userModel.blogDetails(requestData)
             return middleware.sendResponse(req, res, response)
         }catch(error){
@@ -120,7 +115,6 @@ class userController {
     async updateBlog(req, res) {
         let requestData = req.body
         requestData.authorId = req.userId
-        console.log("Data : ", req.body)
         let rules = validationRules.updateBlog;
         let message = {
             required: req.language?.required
